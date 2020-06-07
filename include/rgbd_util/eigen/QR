@@ -1,0 +1,6 @@
+#include "rgbd_util/eigen/preinclude.h"
+#ifdef RGBD_UTIL_USE_EIGEN3
+#include <Eigen3/QR>
+#else
+#include <Eigen/QR>
+#endif

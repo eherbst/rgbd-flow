@@ -1,0 +1,15 @@
+#include "rgbd_util/eigen/preinclude.h"
+#ifdef RGBD_UTIL_USE_EIGEN3
+#include <Eigen3/Geometry>
+// newest versions of Eigen3 no longer have Transform3f
+namespace Eigen3 {
+	typedef Eigen3::Affine3f Transform3f;
+	typedef Eigen3::Affine3d Transform3d;
+}
+#else
+#include <Eigen/Geometry>
+namespace Eigen {
+	typedef Eigen::Affine3f Transform3f;
+	typedef Eigen::Affine3d Transform3d;
+}
+#endif

@@ -1,0 +1,10 @@
+#include "rgbd_util/eigen/preinclude.h"
+#ifndef EIGEN_USE_NEW_STDVECTOR
+	#define EIGEN_USE_NEW_STDVECTOR //see http://eigen.tuxfamily.org/dox/StlContainers.html
+#endif
+#ifdef RGBD_UTIL_USE_EIGEN3
+#include <Eigen3/StdVector>
+#else
+#include <Eigen/StdVector>
+#endif
+
